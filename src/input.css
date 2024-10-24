@@ -14,11 +14,25 @@
         -moz-appearance: none;
         /* for Safari, Chrome, Opera */
         -webkit-appearance: none;
+        background-image: url('./asset/img/chevron.svg');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        padding-right: 30px;
     }
 
     /* for IE10 */
     select::-ms-expand {
         display: none;
-        
+    }
+
+    /* Untuk memastikan chevron selalu terlihat */
+    select::-webkit-outer-spin-button,
+    select::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .nav-link:hover svg path{
+        stroke: #DAFF00;
     }
 }

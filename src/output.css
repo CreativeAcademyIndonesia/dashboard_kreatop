@@ -565,6 +565,10 @@ select {
   -moz-appearance: none;
   /* for Safari, Chrome, Opera */
   -webkit-appearance: none;
+  background-image: url('./asset/img/chevron.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
 }
 
 /* for IE10 */
@@ -573,13 +577,49 @@ select::-ms-expand {
   display: none;
 }
 
+/* Untuk memastikan chevron selalu terlihat */
+
+select::-webkit-outer-spin-button,
+    select::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nav-link:hover svg path{
+  stroke: #DAFF00;
+}
+
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
+}
+
+.right-\[17px\]{
+  right: 17px;
+}
+
+.top-\[16px\]{
+  top: 16px;
+}
+
+.right-0{
+  right: 0px;
+}
+
+.top-0{
+  top: 0px;
 }
 
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.mt-4{
+  margin-top: 1rem;
 }
 
 .flex{
@@ -590,8 +630,12 @@ select::-ms-expand {
   display: inline-flex;
 }
 
-.hidden{
-  display: none;
+.grid{
+  display: grid;
+}
+
+.h-6{
+  height: 1.5rem;
 }
 
 .h-\[100dvh\]{
@@ -610,8 +654,20 @@ select::-ms-expand {
   height: 60px;
 }
 
+.h-\[6px\]{
+  height: 6px;
+}
+
 .h-full{
   height: 100%;
+}
+
+.h-\[24px\]{
+  height: 24px;
+}
+
+.h-\[46px\]{
+  height: 46px;
 }
 
 .w-\[170px\]{
@@ -622,26 +678,38 @@ select::-ms-expand {
   width: 1px;
 }
 
-.w-\[280px\]{
-  width: 280px;
+.w-\[440px\]{
+  width: 440px;
 }
 
 .w-\[50px\]{
   width: 50px;
 }
 
+.w-\[6px\]{
+  width: 6px;
+}
+
 .w-full{
   width: 100%;
 }
 
-.w-\[440px\]{
-  width: 440px;
+.min-w-\[280px\]{
+  min-width: 280px;
+}
+
+.min-w-\[440px\]{
+  min-width: 440px;
 }
 
 .appearance-none{
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -654,6 +722,10 @@ select::-ms-expand {
 
 .items-center{
   align-items: center;
+}
+
+.justify-start{
+  justify-content: flex-start;
 }
 
 .justify-center{
@@ -680,6 +752,10 @@ select::-ms-expand {
   gap: 1.5rem;
 }
 
+.gap-8{
+  gap: 2rem;
+}
+
 .gap-\[14px\]{
   gap: 14px;
 }
@@ -688,8 +764,20 @@ select::-ms-expand {
   gap: 50px;
 }
 
-.gap-8{
-  gap: 2rem;
+.gap-\[75px\]{
+  gap: 75px;
+}
+
+.gap-\[30px\]{
+  gap: 30px;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
+.rounded-\[10px\]{
+  border-radius: 10px;
 }
 
 .rounded-\[20px\]{
@@ -704,6 +792,10 @@ select::-ms-expand {
   border-radius: 0.75rem;
 }
 
+.rounded-\[36px\]{
+  border-radius: 36px;
+}
+
 .border{
   border-width: 1px;
 }
@@ -716,6 +808,11 @@ select::-ms-expand {
 .border-grey-3{
   --tw-border-opacity: 1;
   border-color: rgb(40 40 40 / var(--tw-border-opacity));
+}
+
+.bg-dark-blue{
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 46 203 / var(--tw-bg-opacity));
 }
 
 .bg-dark-body{
@@ -733,6 +830,11 @@ select::-ms-expand {
   background-color: rgb(40 40 40 / var(--tw-bg-opacity));
 }
 
+.bg-light-red{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 234 236 / var(--tw-bg-opacity));
+}
+
 .bg-light-yellow{
   --tw-bg-opacity: 1;
   background-color: rgb(218 255 0 / var(--tw-bg-opacity));
@@ -743,8 +845,43 @@ select::-ms-expand {
   background-color: rgb(0 122 255 / var(--tw-bg-opacity));
 }
 
+.bg-primary-purple{
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 46 203 / var(--tw-bg-opacity));
+}
+
+.bg-primary-red{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 31 / var(--tw-bg-opacity));
+}
+
 .bg-transparent{
   background-color: transparent;
+}
+
+.bg-light-green{
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 255 190 / var(--tw-bg-opacity));
+}
+
+.bg-dark-red{
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 55 46 / var(--tw-bg-opacity));
+}
+
+.bg-secondary-green{
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 203 137 / var(--tw-bg-opacity));
+}
+
+.bg-primary-tosca{
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 165 203 / var(--tw-bg-opacity));
+}
+
+.bg-primary-pink{
+  --tw-bg-opacity: 1;
+  background-color: rgb(200 46 203 / var(--tw-bg-opacity));
 }
 
 .p-4{
@@ -767,6 +904,11 @@ select::-ms-expand {
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-\[30px\]{
@@ -794,9 +936,35 @@ select::-ms-expand {
   padding-bottom: 1.25rem;
 }
 
+.py-\[18px\]{
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.py-\[30px\]{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .py-\[50px\]{
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
+.pr-0{
+  padding-right: 0px;
+}
+
+.pb-\[16px\]{
+  padding-bottom: 16px;
+}
+
+.pt-\[30px\]{
+  padding-top: 30px;
 }
 
 .text-center{
@@ -805,6 +973,10 @@ select::-ms-expand {
 
 .text-\[10px\]{
   font-size: 10px;
+}
+
+.text-\[28px\]{
+  font-size: 28px;
 }
 
 .text-\[32px\]{
@@ -826,6 +998,10 @@ select::-ms-expand {
   line-height: 1.25rem;
 }
 
+.text-\[46px\]{
+  font-size: 46px;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -844,13 +1020,48 @@ select::-ms-expand {
   color: rgb(103 103 103 / var(--tw-text-opacity));
 }
 
+.text-primary-red{
+  --tw-text-opacity: 1;
+  color: rgb(255 0 31 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-primary-green{
+  --tw-text-opacity: 1;
+  color: rgb(3 169 0 / var(--tw-text-opacity));
+}
+
+.text-grey-2{
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity));
+}
+
+.ring-2{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-transparent{
+  --tw-ring-color: transparent;
 }
 
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.hover\:ring-grey-3:hover{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(40 40 40 / var(--tw-ring-opacity));
+}
+
+.group:hover .group-hover\:text-light-yellow{
+  --tw-text-opacity: 1;
+  color: rgb(218 255 0 / var(--tw-text-opacity));
 }
