@@ -134,21 +134,21 @@ var options = {
             fontSize: '12px',
             fontFamily: 'Poppins'
         },
-        custom: function({ series, seriesIndex, dataPointIndex, w }) {
-            var colors = ['#007AFF', '#2ECB89', '#CB372E'];
-            var seriesNames = ['Reach', 'Revenue', 'Clients'];
-            var tooltipContent = '<div class="flex flex-col gap-[10px] p-[10px] rounded-[16px] border border-[#282828] bg-[#111111]">';
+        // custom: function({ series, seriesIndex, dataPointIndex, w }) {
+        //     var colors = ['#007AFF', '#2ECB89', '#CB372E'];
+        //     var seriesNames = ['Reach', 'Revenue', 'Clients'];
+        //     var tooltipContent = '<div class="flex flex-col gap-[10px] p-[10px] rounded-[16px] border border-[#282828] bg-[#111111]">';
             
-            for (var i = 0; i < series.length; i++) {
-                tooltipContent += `<div style="display: flex; align-items: center; gap : 8px; height : 21px;">
-                                  <span class="w-[12px] h-[12px] rounded-full bg-['${colors[i]}'] " style="background : ${colors[i]}"></span>
-                                  <span class="text-['${colors[i]}'] ml-[4px] font-semibold text-sm"> ${ i == 0 ? '$' : ''} ${series[i][dataPointIndex]} ${seriesNames[i]}</span>
-                                  </div>`;
-            }
+        //     for (var i = 0; i < series.length; i++) {
+        //         tooltipContent += `<div style="display: flex; align-items: center; gap : 8px; height : 21px;">
+        //                           <span class="w-[12px] h-[12px] rounded-full bg-['${colors[i]}'] " style="background : ${colors[i]}"></span>
+        //                           <span class="text-['${colors[i]}'] ml-[4px] font-semibold text-sm"> ${ i == 0 ? '$' : ''} ${series[i][dataPointIndex]} ${seriesNames[i]}</span>
+        //                           </div>`;
+        //     }
             
-            tooltipContent += '</div>';
-            return tooltipContent;
-        }
+        //     tooltipContent += '</div>';
+        //     return tooltipContent;
+        // }
     },
     legend: {
         show: false,
