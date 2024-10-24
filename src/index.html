@@ -8,15 +8,15 @@
     <link rel="icon" href="./asset/img/kreatop logo.svg" type="image/png">
     <title>Kreatop - By Agus</title>
 </head>
-<body class="bg-dark-body text-white max-w-[100vw] overflow-x-hidden ">
-    <section class="flex">
+<body class="bg-dark-body text-white w-[100vw]">
+    <section class="flex max-w-[100vw]  relative overflow-x-hidden">
 
         <!-- Side Menu -->
         <aside class="px-4 md:px-[30px] py-[30px] md:py-[50px] flex flex-col bg-grey-2 w-auto xl:min-w-[280px] h-[100dvh] gap-[75px] justify-between sticky top-0 ">
             <div class="flex flex-col gap-[50px]">
                 <div>
-                    <img src="../src/asset/img/logo.svg" class="mx-auto hidden xl:block" alt="kreatop logo">
-                    <img src="../src/asset/img/kreatop logo.svg" class="mx-auto xl:hidden block" alt="kreatop logo">
+                    <img src="./asset/img/logo.svg" class="mx-auto hidden xl:block" alt="kreatop logo">
+                    <img src="./asset/img/kreatop logo.svg" class="mx-auto xl:hidden block" alt="kreatop logo">
                 </div>
                 <div class="flex flex-col gap-4">
                     <a href="" class="bg-light-yellow pl-4 pr-0 py-2.5 rounded-full flex items-center gap-3 w-[56px] xl:w-auto">
@@ -148,7 +148,8 @@
                     </div>
                 </div>
             </header>
-            <div class="flex gap-8">
+
+            <div class="flex gap-8 ">
                 <div class="w-full py-[30px]">
                     <div class="flex items-center justify-between">
                         <h4 class="font-bold text-white text-lg">Latest Statistics</h4>
@@ -263,7 +264,9 @@
                         </div>
                     </div>
                 </div>
-                <aside id="sidebar-right" class="min-w-[440px] p-4 md:p-[30px] flex flex-col gap-[30px] bg-grey-2 xl:relative absolute xl:right-0 -right-[440px] transition-all ease-in-out">
+
+                <!-- Sidebar Right -->
+                <aside id="sidebar-right" class="w-[320px] md:min-w-[440px] p-4 md:p-[30px] flex flex-col gap-[30px] bg-grey-2 xl:relative absolute xl:right-0 -right-[320px] md:-right-[440px] transition-all ease-in-out">
                     <button onclick="toogleSidebar(this)" class="w-10 h-10 bg-light-yellow absolute top-0 -left-10 rounded-l-lg z-50 items-center justify-center text-dark-body xl:hidden flex">
                         <img src="./asset/img/chevron-right.svg" alt="Chevron right">
                     </button>
@@ -273,7 +276,7 @@
                         </div>
                         <div class="flex flex-col">
                             <span class="text-base text-grey-2">Balance</span>
-                            <h3 class="text-dark-body text-[46px] font-bold">$22,591,200</h3>
+                            <h3 class="text-dark-body text-3xl md:text-[46px] font-bold">$22,591,200</h3>
                         </div>
                         <span class="text-grey-2 text-base">Shayna Lowi • 08/22</span>
                         <img src="./asset/icon/accsent line.svg" class="absolute top-0 right-0 w-full h-full" alt="accsent line">

@@ -174,6 +174,7 @@ chart.render();
 
 function toogleSidebar(evt){
     const aside = evt.closest('aside')
-    aside.classList.toggle('-right-[440px]')
+    aside.classList.toggle('md:-right-[440px]')
+    aside.classList.toggle('-right-[320px]')
     aside.classList.toggle('-right-0')
 }
